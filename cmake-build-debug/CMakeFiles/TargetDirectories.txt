@@ -1,0 +1,3 @@
+C:/Users/arman/Documents/GitHub/ElaboratoLaboratorio/cmake-build-debug/CMakeFiles/ElaboratoLaboratorio.dir
+C:/Users/arman/Documents/GitHub/ElaboratoLaboratorio/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/arman/Documents/GitHub/ElaboratoLaboratorio/cmake-build-debug/CMakeFiles/rebuild_cache.dir
