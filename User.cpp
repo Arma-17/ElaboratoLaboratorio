@@ -3,3 +3,9 @@
 //
 
 #include "User.h"
+User::~User(){
+    saveInFile();
+    readInFile();
+    delete birthday;
+}
+

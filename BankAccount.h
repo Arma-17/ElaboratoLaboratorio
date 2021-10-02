@@ -7,6 +7,11 @@
 
 
 class BankAccount {
+private:
+    std::string accountName;
+    int balance;
+
+public:
 
 };
 
