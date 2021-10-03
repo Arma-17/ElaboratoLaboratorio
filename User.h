@@ -4,7 +4,6 @@
 
 #ifndef ELABORATOLABORATORIO_USER_H
 #define ELABORATOLABORATORIO_USER_H
-#include <iostram>
 #include <ctime>
 #include <memory>
 #include <vector>

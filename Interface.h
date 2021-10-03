@@ -9,7 +9,19 @@
 class Interface {
 private:
     std::unique_ptr<User> user;
+
 public:
+
+    //start program
+    bool startProgram();
+
+    //create a user profile and a bank account
+    void createBankAccount();
+    void createProfile();
+
+    //print the various option the user has
+    void printOptions();
+
 
 };
 
