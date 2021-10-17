@@ -80,6 +80,24 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="C:/Users/arman/Documents/GitHub/ElaboratoLaboratorio/BankAccount.cpp">
+			<Option target="ElaboratoLaboratorio"/>
+		</Unit>
+		<Unit filename="C:/Users/arman/Documents/GitHub/ElaboratoLaboratorio/BankAccount.h">
+			<Option target="ElaboratoLaboratorio"/>
+		</Unit>
+		<Unit filename="C:/Users/arman/Documents/GitHub/ElaboratoLaboratorio/Interface.cpp">
+			<Option target="ElaboratoLaboratorio"/>
+		</Unit>
+		<Unit filename="C:/Users/arman/Documents/GitHub/ElaboratoLaboratorio/Interface.h">
+			<Option target="ElaboratoLaboratorio"/>
+		</Unit>
+		<Unit filename="C:/Users/arman/Documents/GitHub/ElaboratoLaboratorio/User.cpp">
+			<Option target="ElaboratoLaboratorio"/>
+		</Unit>
+		<Unit filename="C:/Users/arman/Documents/GitHub/ElaboratoLaboratorio/User.h">
+			<Option target="ElaboratoLaboratorio"/>
+		</Unit>
 		<Unit filename="C:/Users/arman/Documents/GitHub/ElaboratoLaboratorio/main.cpp">
 			<Option target="ElaboratoLaboratorio"/>
 		</Unit>

@@ -1,4 +1,7 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/ElaboratoLaboratorio.dir/BankAccount.cpp.obj"
+  "CMakeFiles/ElaboratoLaboratorio.dir/Interface.cpp.obj"
+  "CMakeFiles/ElaboratoLaboratorio.dir/User.cpp.obj"
   "CMakeFiles/ElaboratoLaboratorio.dir/main.cpp.obj"
   "ElaboratoLaboratorio.exe"
   "ElaboratoLaboratorio.exe.manifest"
