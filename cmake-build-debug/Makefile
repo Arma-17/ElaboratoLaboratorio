@@ -128,6 +128,102 @@ ElaboratoLaboratorio/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ElaboratoLaboratorio.dir\build.make CMakeFiles/ElaboratoLaboratorio.dir/build
 .PHONY : ElaboratoLaboratorio/fast
 
+BankAccount.obj: BankAccount.cpp.obj
+.PHONY : BankAccount.obj
+
+# target to build an object file
+BankAccount.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ElaboratoLaboratorio.dir\build.make CMakeFiles/ElaboratoLaboratorio.dir/BankAccount.cpp.obj
+.PHONY : BankAccount.cpp.obj
+
+BankAccount.i: BankAccount.cpp.i
+.PHONY : BankAccount.i
+
+# target to preprocess a source file
+BankAccount.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ElaboratoLaboratorio.dir\build.make CMakeFiles/ElaboratoLaboratorio.dir/BankAccount.cpp.i
+.PHONY : BankAccount.cpp.i
+
+BankAccount.s: BankAccount.cpp.s
+.PHONY : BankAccount.s
+
+# target to generate assembly for a file
+BankAccount.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ElaboratoLaboratorio.dir\build.make CMakeFiles/ElaboratoLaboratorio.dir/BankAccount.cpp.s
+.PHONY : BankAccount.cpp.s
+
+Interface.obj: Interface.cpp.obj
+.PHONY : Interface.obj
+
+# target to build an object file
+Interface.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ElaboratoLaboratorio.dir\build.make CMakeFiles/ElaboratoLaboratorio.dir/Interface.cpp.obj
+.PHONY : Interface.cpp.obj
+
+Interface.i: Interface.cpp.i
+.PHONY : Interface.i
+
+# target to preprocess a source file
+Interface.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ElaboratoLaboratorio.dir\build.make CMakeFiles/ElaboratoLaboratorio.dir/Interface.cpp.i
+.PHONY : Interface.cpp.i
+
+Interface.s: Interface.cpp.s
+.PHONY : Interface.s
+
+# target to generate assembly for a file
+Interface.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ElaboratoLaboratorio.dir\build.make CMakeFiles/ElaboratoLaboratorio.dir/Interface.cpp.s
+.PHONY : Interface.cpp.s
+
+Transaction.obj: Transaction.cpp.obj
+.PHONY : Transaction.obj
+
+# target to build an object file
+Transaction.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ElaboratoLaboratorio.dir\build.make CMakeFiles/ElaboratoLaboratorio.dir/Transaction.cpp.obj
+.PHONY : Transaction.cpp.obj
+
+Transaction.i: Transaction.cpp.i
+.PHONY : Transaction.i
+
+# target to preprocess a source file
+Transaction.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ElaboratoLaboratorio.dir\build.make CMakeFiles/ElaboratoLaboratorio.dir/Transaction.cpp.i
+.PHONY : Transaction.cpp.i
+
+Transaction.s: Transaction.cpp.s
+.PHONY : Transaction.s
+
+# target to generate assembly for a file
+Transaction.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ElaboratoLaboratorio.dir\build.make CMakeFiles/ElaboratoLaboratorio.dir/Transaction.cpp.s
+.PHONY : Transaction.cpp.s
+
+User.obj: User.cpp.obj
+.PHONY : User.obj
+
+# target to build an object file
+User.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ElaboratoLaboratorio.dir\build.make CMakeFiles/ElaboratoLaboratorio.dir/User.cpp.obj
+.PHONY : User.cpp.obj
+
+User.i: User.cpp.i
+.PHONY : User.i
+
+# target to preprocess a source file
+User.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ElaboratoLaboratorio.dir\build.make CMakeFiles/ElaboratoLaboratorio.dir/User.cpp.i
+.PHONY : User.cpp.i
+
+User.s: User.cpp.s
+.PHONY : User.s
+
+# target to generate assembly for a file
+User.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ElaboratoLaboratorio.dir\build.make CMakeFiles/ElaboratoLaboratorio.dir/User.cpp.s
+.PHONY : User.cpp.s
+
 main.obj: main.cpp.obj
 .PHONY : main.obj
 
@@ -161,6 +257,18 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... ElaboratoLaboratorio
+	@echo ... BankAccount.obj
+	@echo ... BankAccount.i
+	@echo ... BankAccount.s
+	@echo ... Interface.obj
+	@echo ... Interface.i
+	@echo ... Interface.s
+	@echo ... Transaction.obj
+	@echo ... Transaction.i
+	@echo ... Transaction.s
+	@echo ... User.obj
+	@echo ... User.i
+	@echo ... User.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

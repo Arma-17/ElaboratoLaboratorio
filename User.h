@@ -14,21 +14,23 @@ private:
     std::string name;
     std::string surname;
     tm * birthday;
-    std::sting address;
+    std::string address;
     std::vector<std::unique_ptr<BankAccount>> account;
-    bool activeAccount;
+    int activeAccount;
 public:
-    User(std::string n,std::sting s,tm* b,std::string a):name(n),surname(s),address(a),birthday(b){
-        activeAccount=false;
+    User(std::string n,std::string s,tm* b,std::string a):name(std::move(n)),surname(std::move(s)),address(std::move(a)),birthday(b){
+        activeAccount=0;
     }
     ~User();
 
     //basic operation
     bool withdraw(int value,const std::string & cause);
-    bool deposit(int value,const std::string & cause);
+    void deposit(int value,const std::string & cause);
 
     //transaction management
     bool transfer(int receiver, int value, const std::string & cause);
+    void addTransaction(const Transaction &add);
+    bool delTransaction(int index,int type);
 
     //file management
     void saveInFile() const;
@@ -42,8 +44,13 @@ public:
     void printWithdrawHistory() const;
     void printDepositHistory() const;
 
-
-
+    //getter
+    const std::vector <std::unique_ptr<BankAccount>> &getAccount() const{
+        return account;
+    }
+    int getActiveAccount() const{
+        return activeAccount;
+    }
 
 };
 
