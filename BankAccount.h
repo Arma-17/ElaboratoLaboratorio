@@ -36,11 +36,17 @@ public:
     int getBalance() const {
         return balance;
     }
-    const std::vector<std::unique_ptr<Transaction>> &Withdraw() const{
-        return transactionHistoryWithdraw;
+    Transaction getWithdrawAtIndex(int index) const{
+        return *transactionHistoryWithdraw.at(index);
     }
-    const std::vector<std::unique_ptr<Transaction>> &Deposit() const{
-        return transactionHistoryDeposit;
+    size_t getSizeOfWithdraw() const{
+        return transactionHistoryWithdraw.size();
+    }
+    Transaction getDepositAtIndex(int index) const{
+        return *transactionHistoryDeposit.at(index);
+    }
+    size_t getSizeOfDeposit() const{
+        return transactionHistoryDeposit.size();
     }
 };
 

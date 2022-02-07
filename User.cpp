@@ -44,25 +44,29 @@ void User::printAccountInfo() const {
 }
 
 void User::printDepositHistory() const {
-    std::vector<std::unique_ptr<Transaction>> deposit=account.at(activeAccount)->Deposit();
-    for(const auto & iter :deposit){
-        std::cout<<" In: "<<iter->getDateAndTime()<<" , "<<iter->getSender();
+    for(int i=0;i<=account.at(activeAccount)->getSizeOfDeposit();i++){
+        auto iter=account.at(activeAccount)->getDepositAtIndex(i);
+        std::cout<<" In: "<<iter.getDateAndTime()<<" , "<<iter.getSender();
         std::cout<<"Deposited : ";
-        std::cout<<iter->getAmount()<<" $ "<<std::endl;
-        std::cout<<" Cause : "<<iter->getCause()<<std::endl;
+        std::cout<<iter.getAmount()<<" $ "<<std::endl;
+        std::cout<<" Cause : "<<iter.getCause()<<std::endl;
     }
 }
 
 void User::printWithdrawHistory() const {
-    std::vector<std::unique_ptr<Transaction>> withdraw=account.at(activeAccount)->Withdraw();
-    for(const auto & iter :withdraw){
-        std::cout<<" In: "<<iter->getDateAndTime()<<" , "<<iter->getSender();
+    for(int i=0;i<=account.at(activeAccount)->getSizeOfWithdraw();i++){
+        auto iter= account.at(activeAccount)->getWithdrawAtIndex(i);
+        std::cout<<" In: "<<iter.getDateAndTime()<<" , "<<iter.getSender();
         std::cout<<"Withdrawn : ";
-        std::cout<<iter->getAmount()<<" $ "<<std::endl;
-        std::cout<<" Cause : "<<iter->getCause()<<std::endl;
+        std::cout<<iter.getAmount()<<" $ "<<std::endl;
+        std::cout<<" Cause : "<<iter.getCause()<<std::endl;
     }
 }
 
+//add bank Account
+void User::addAccount(const std::string &accountName) {
+    account.push_back(std::make_unique<BankAccount>(accountName));
+}
 
 // txt file operation
 

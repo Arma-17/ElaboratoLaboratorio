@@ -6,10 +6,6 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/arman/Documents/GitHub/ElaboratoLaboratorio/BankAccount.cpp
-BankAccount.h
-C:/Users/arman/Documents/GitHub/ElaboratoLaboratorio/BankAccount.h
-
 C:/Users/arman/Documents/GitHub/ElaboratoLaboratorio/BankAccount.h
 iostream
 -
@@ -22,23 +18,17 @@ memory
 Transaction.h
 C:/Users/arman/Documents/GitHub/ElaboratoLaboratorio/Transaction.h
 
-C:/Users/arman/Documents/GitHub/ElaboratoLaboratorio/Interface.cpp
-Interface.h
-C:/Users/arman/Documents/GitHub/ElaboratoLaboratorio/Interface.h
-
 C:/Users/arman/Documents/GitHub/ElaboratoLaboratorio/Interface.h
 User.h
 C:/Users/arman/Documents/GitHub/ElaboratoLaboratorio/User.h
+limits
+-
 
 C:/Users/arman/Documents/GitHub/ElaboratoLaboratorio/Transaction.h
 iostream
 -
 ctime
 -
-
-C:/Users/arman/Documents/GitHub/ElaboratoLaboratorio/User.cpp
-User.h
-C:/Users/arman/Documents/GitHub/ElaboratoLaboratorio/User.h
 
 C:/Users/arman/Documents/GitHub/ElaboratoLaboratorio/User.h
 ctime
@@ -49,4 +39,16 @@ vector
 -
 BankAccount.h
 C:/Users/arman/Documents/GitHub/ElaboratoLaboratorio/BankAccount.h
+
+C:/Users/arman/Documents/GitHub/ElaboratoLaboratorio/main.cpp
+iostream
+-
+Transaction.h
+C:/Users/arman/Documents/GitHub/ElaboratoLaboratorio/Transaction.h
+BankAccount.h
+C:/Users/arman/Documents/GitHub/ElaboratoLaboratorio/BankAccount.h
+User.h
+C:/Users/arman/Documents/GitHub/ElaboratoLaboratorio/User.h
+Interface.h
+C:/Users/arman/Documents/GitHub/ElaboratoLaboratorio/Interface.h
 

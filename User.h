@@ -37,6 +37,9 @@ public:
     void readInFile() const;
 
 
+    //add bank Account
+    void addAccount(const std::string& accountName);
+
     //print information
     void printUserInfo () const;
     void printAccountInfo () const;
@@ -45,7 +48,7 @@ public:
     void printDepositHistory() const;
 
     //getter
-    const std::vector <std::unique_ptr<BankAccount>> &getAccount() const{
+    const std::vector<std::unique_ptr<BankAccount>> &getAccount() const{
         return account;
     }
     int getActiveAccount() const{

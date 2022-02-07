@@ -1,9 +1,16 @@
 //
 // Created by arman on 28/09/2021.
 //
+#include <iostream>
+#include "Transaction.h"
+#include "BankAccount.h"
+#include "User.h"
+#include "Interface.h"
 
-#include<iostream>
+int main() {
 
-int main(){
-    std::cout<<"Hello Word"<<std::endl;
+    Interface myInterface;
+    while (myInterface.startProgram());
+
+    return 0;
 }

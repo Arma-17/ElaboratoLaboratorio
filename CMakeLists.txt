@@ -4,4 +4,4 @@ project(ElaboratoLaboratorio)
 set(CMAKE_CXX_STANDARD 14)
 
 add_executable(ElaboratoLaboratorio
-        main.cpp User.h User.cpp Interface.h Interface.cpp BankAccount.h BankAccount.cpp Transaction.h Transaction.cpp)
+        main.cpp User.cpp  User.h Transaction.cpp Transaction.h Interface.cpp Interface.h BankAccount.cpp BankAccount.h)

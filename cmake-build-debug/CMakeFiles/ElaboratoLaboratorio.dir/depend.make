@@ -11,10 +11,17 @@ CMakeFiles/ElaboratoLaboratorio.dir/Interface.cpp.obj: \
  ../Interface.h \
  ../Transaction.h \
  ../User.h
+CMakeFiles/ElaboratoLaboratorio.dir/Transaction.cpp.obj: \
+ ../Transaction.cpp \
+ ../Transaction.h
 CMakeFiles/ElaboratoLaboratorio.dir/User.cpp.obj: \
  ../BankAccount.h \
  ../Transaction.h \
  ../User.cpp \
  ../User.h
 CMakeFiles/ElaboratoLaboratorio.dir/main.cpp.obj: \
+ ../BankAccount.h \
+ ../Interface.h \
+ ../Transaction.h \
+ ../User.h \
  ../main.cpp
