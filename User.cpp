@@ -44,28 +44,40 @@ void User::printAccountInfo() const {
 }
 
 void User::printDepositHistory() const {
-    for(int i=0;i<=account.at(activeAccount)->getSizeOfDeposit();i++){
-        auto iter=account.at(activeAccount)->getDepositAtIndex(i);
-        std::cout<<" In: "<<iter.getDateAndTime()<<" , "<<iter.getSender();
-        std::cout<<"Deposited : ";
-        std::cout<<iter.getAmount()<<" $ "<<std::endl;
-        std::cout<<" Cause : "<<iter.getCause()<<std::endl;
+    if(account.at(activeAccount)->getSizeOfDeposit() != 0) {
+        for (int i = 0; i < account.at(activeAccount)->getSizeOfDeposit(); i++) {
+            auto iter = account.at(activeAccount)->getDepositAtIndex(i);
+            std::cout << " In: " << iter.getDateAndTime() << ", " << iter.getSender();
+            std::cout << "  Deposited : ";
+            std::cout << iter.getAmount() << " $ " << std::endl;
+            std::cout << " Cause : " << iter.getCause() << std::endl;
+        }
     }
+    else
+        std::cout<<" No deposit has been made "<< std::endl;
 }
 
 void User::printWithdrawHistory() const {
-    for(int i=0;i<=account.at(activeAccount)->getSizeOfWithdraw();i++){
-        auto iter= account.at(activeAccount)->getWithdrawAtIndex(i);
-        std::cout<<" In: "<<iter.getDateAndTime()<<" , "<<iter.getSender();
-        std::cout<<"Withdrawn : ";
-        std::cout<<iter.getAmount()<<" $ "<<std::endl;
-        std::cout<<" Cause : "<<iter.getCause()<<std::endl;
+    if(account.at(activeAccount)->getSizeOfWithdraw()!=0) {
+        for (int i = 0; i < account.at(activeAccount)->getSizeOfWithdraw(); i++) {
+            auto iter = account.at(activeAccount)->getWithdrawAtIndex(i);
+            std::cout << " In: " << iter.getDateAndTime() << ", " << iter.getSender();
+            std::cout << "  Withdrawn : ";
+            std::cout << iter.getAmount() << " $ " << std::endl;
+            std::cout << " Cause : " << iter.getCause() << std::endl;
+        }
     }
+    else
+        std::cout<<" No withdrawal was made " << std::endl;
 }
 
 //add bank Account
 void User::addAccount(const std::string &accountName) {
     account.push_back(std::make_unique<BankAccount>(accountName));
+}
+
+void User::switchAccount(int accountNumber) { //switches active account
+    activeAccount = accountNumber - 1;
 }
 
 // txt file operation
@@ -84,6 +96,7 @@ void User::saveInFile() const {
     for(const auto &itr:account){
         data << "Account n:"<<i<<"   "<< account.at(i-1)->getName()<<std::endl;
         data<< " Balance: "<< account.at(i-1)->getBalance()<<"$"<<std::endl;
+        i++;
     }
 }
 

@@ -39,6 +39,7 @@ public:
 
     //add bank Account
     void addAccount(const std::string& accountName);
+    void switchAccount (int accountNumber);
 
     //print information
     void printUserInfo () const;

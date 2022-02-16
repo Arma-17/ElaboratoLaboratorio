@@ -6,64 +6,107 @@
 #include "Interface.h"
 
 bool Interface::startProgram() {
-    int count=0;
+    int input=0;
     if (!user){
         std:: cout << "Welcome, to make any action you first need to create a user profile"<< std:: endl;
         std:: cout << "Press (1) to create a user profile" << std:: endl ;
         std:: cout << "Press (0) to exit" << std:: endl;
 
-        std::cin>>count;
-        for (int i = 0; i < 3; i++) {
-
-            if (count == 0) {
+        while (!getIntInput(input, 2)){}
+            if (input == 0) {
                 std::cout << " Closing... " << std::endl;
                 return false;
 
-            } else if (count == 1) {
+            } else if (input == 1)
                 createProfile();
-
-            } else {
-                std::cout<<" The key pressed is invalid "<< std::endl;
-                std::cout<<" You have "<<3-i<<" attempts left "<< std::endl;
-
-                std:: cout << "Press (1) to create a user profile" << std:: endl ;
-                std:: cout << "Press (0) to exit" << std:: endl;
-                std::cin>>count;
-            }
-        }
-        std::cout << " Closing... " << std::endl;
-        return false;
     }
-
     if(user->getAccount().empty()){
-        count=0;
         std:: cout << "To make any action you first need to create a bank account"<< std:: endl;
         std:: cout << "Press (1) to create an account" << std:: endl ;
         std:: cout << "Press (0) to exit" << std:: endl;
-        std::cin>>count;
-        for (int i = 0; i < 3; i++) {
+        while(!getIntInput(input,2)){}
 
-            if (count == 0) {
+            if (input == 0) {
                 std::cout << " Closing... " << std::endl;
                 return false;
 
-            } else if (count == 1) {
+            } else if (input == 1)
                 createBankAccount();
 
-            } else {
-                std::cout<<" The key pressed is invalid "<< std::endl;
-                std::cout<<" You have "<<3-i<<" attempts left "<< std::endl;
-
-                std:: cout << "Press (1) to create an account" << std:: endl ;
-                std:: cout << "Press (0) to exit" << std:: endl;
-                std::cin>>count;
-            }
-        }
-        std::cout << " Closing... " << std::endl;
-        return false;
 
     }
+    printOptions();
+    while(!getIntInput(input,7));
+    switch (input) {
+        case 1:{    //Deposit
+            std::cout<<"Chose the amount you want to deposit, press (0) to cancel operation "<<std::endl;
+            while(!getIntInput(input));
+            if(input>0){
+                std::cout<<" Please insert the cause of the operation: "<<std::endl;
+                std::string cause;
+                while (!getStringInput(cause));
+                user->deposit(input,cause);
+                std::cout<< " You have successfully deposited "<< input<< "$"<<std::endl;
+            }
+            break;
+        }
+        case 2:{    //Withdraw
+            if(user->getAccount().at(user->getActiveAccount())->getBalance()>0){
+                std::cout<<"Chose the amount you want to withdraw, press (0) to cancel operation "<<std::endl;
+                while (!getIntInput(input,user->getAccount().at(user->getActiveAccount())->getBalance()));
+                if(input>0){
+                    std::cout<<" Please insert the cause of the operation: "<<std::endl;
+                    std::string cause;
+                    while (!getStringInput(cause));
+                    user->withdraw(input,cause);
+                    std::cout<< " You have successfully withdrawn "<< input<< "$"<<std::endl;
+                }
+                break;
+            }
+            else
+                std:: cout << "Your balance is 0!" << std:: endl;
+            break;
+        }
+        case 3:{    //transfer cash
+
+        }
+        case 4:{    //user details
+            user->printUserInfo();
+            break;
+        }
+        case 5:{    //account history
+            std:: cout << "WITHDRAWS:" << std:: endl;
+            user->printWithdrawHistory();
+            std:: cout << "DEPOSITS:" << std:: endl;
+            user->printDepositHistory();
+            std:: cout << std:: endl;
+            break;
+        }
+        case 6:{    //activate account
+            user->printAccountInfo();
+            std:: cout << "Select the number of the account you want to set active, press (0) to cancel operation " << std:: endl;
+            while (!(getIntInput(input,user->getAccount().size() )));
+            if (input != 0)
+                user ->switchAccount(input);
+            break;
+        }
+        case 7:{    //create another bank account
+            createBankAccount();
+            break;
+        }
+        case 0:{    //close
+            std:: cout << "Quitting..." << std:: endl;
+            return false;
+        }
+        default:{
+            std:: cerr<< "Something went wrong (interface)" <<std:: endl;
+            break;
+        }
+    }
+    return true;
 }
+
+
 
 //Create a Bank Account
 
@@ -99,7 +142,7 @@ void Interface::createProfile() {
         std:: cout << "Please enter your year of birth (number)" << std:: endl;
         while (!(getIntInput(year)));
         dateOfBirth->tm_mday = day;
-        dateOfBirth -> tm_mon = month -1;
+        dateOfBirth -> tm_mon = month ;
         dateOfBirth -> tm_year = year;
         counter ++;
     }while (!isValidDate(dateOfBirth));
@@ -107,7 +150,21 @@ void Interface::createProfile() {
 }
 
 
+void Interface ::printOptions() {
+    std:: cout << "Welcome to account N."<< user-> getActiveAccount() + 1;
+    std:: cout << " - " << user->getAccount().at(user ->getActiveAccount())->getName();
 
+    std:: cout << " - Your BALANCE: "<< user->getAccount().at(user ->getActiveAccount())->getBalance() << "$"<< std:: endl;
+    std:: cout << "Press (0) to quit and view session log" << std:: endl;
+    std:: cout << "Press (1) to deposit cash" << std:: endl;
+    std:: cout << "Press (2) to withdraw cash" << std:: endl;
+    std:: cout << "Press (3) to transfer cash to a different account" << std:: endl;
+    std:: cout << "Press (4) to check your User information" << std:: endl;
+    std:: cout << "Press (5) to check your account transactions history " << std:: endl;
+    std:: cout << "Press (6) to change active account" << std:: endl;
+    std:: cout << "Press (7) to create another bank account" << std:: endl;
+
+}
 
 
 
@@ -118,7 +175,8 @@ void Interface::createProfile() {
 bool Interface ::getStringInput(std::string &input, int minLength, int maxLength) { //takes a string as input
     //performs various checks on that string, returns true if it passes, false otherwise
     try{
-        std::getline(std:: cin,input);
+        //std::getline(std::cin,input);
+        std::cin>>input;
         if (input.length() > maxLength){
             throw std:: out_of_range("String is bigger than maximum required length (" + std::to_string(maxLength) + ") chars");
         }

@@ -6,6 +6,10 @@
 
 #IncludeRegexTransform: 
 
+C:/Users/arman/Documents/GitHub/ElaboratoLaboratorio/BankAccount.cpp
+BankAccount.h
+C:/Users/arman/Documents/GitHub/ElaboratoLaboratorio/BankAccount.h
+
 C:/Users/arman/Documents/GitHub/ElaboratoLaboratorio/BankAccount.h
 iostream
 -
@@ -18,6 +22,10 @@ memory
 Transaction.h
 C:/Users/arman/Documents/GitHub/ElaboratoLaboratorio/Transaction.h
 
+C:/Users/arman/Documents/GitHub/ElaboratoLaboratorio/Interface.cpp
+Interface.h
+C:/Users/arman/Documents/GitHub/ElaboratoLaboratorio/Interface.h
+
 C:/Users/arman/Documents/GitHub/ElaboratoLaboratorio/Interface.h
 User.h
 C:/Users/arman/Documents/GitHub/ElaboratoLaboratorio/User.h
@@ -29,6 +37,10 @@ iostream
 -
 ctime
 -
+
+C:/Users/arman/Documents/GitHub/ElaboratoLaboratorio/User.cpp
+User.h
+C:/Users/arman/Documents/GitHub/ElaboratoLaboratorio/User.h
 
 C:/Users/arman/Documents/GitHub/ElaboratoLaboratorio/User.h
 ctime
