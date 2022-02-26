@@ -49,9 +49,8 @@ public:
     void printDepositHistory() const;
 
     //getter
-    const std::vector<std::unique_ptr<BankAccount>> &getAccount() const{
-        return account;
-    }
+    const std::vector<std::unique_ptr<BankAccount>> &getAccount() const;
+
     int getActiveAccount() const{
         return activeAccount;
     }

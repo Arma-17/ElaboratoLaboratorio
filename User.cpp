@@ -123,3 +123,20 @@ bool User::delTransaction(int index, int type) {
     }
     return true;
 }
+
+
+bool User::transfer(int dest, int value, const std::string &cause) {
+    try{
+        account.at(activeAccount)->withdraw(name+surname,value,cause);
+    }
+    catch (std:: runtime_error & e){
+        std :: cout << e.what() << std:: endl;
+        return false;
+    }
+    account.at(dest - 1)->deposit(name+surname,value,cause);
+    return true;
+}
+
+const std::vector<std::unique_ptr<BankAccount>> &User::getAccount() const {
+    return account;
+}

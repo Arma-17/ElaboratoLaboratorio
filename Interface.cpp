@@ -68,7 +68,39 @@ bool Interface::startProgram() {
             break;
         }
         case 3:{    //transfer cash
+            if (user -> getAccount().at (user->getActiveAccount())->getBalance() > 0){
+                if (user -> getAccount().size() > 1){
+                    int dest;
+                    std::cout<<" These are your accounts : "<<std::endl;
+                    user->printAccountInfo();
+                    std:: cout << "Choose the destination account: ";
+                    do {
+                        while (!(getIntInput(dest)));
+                        if (dest - 1 == user->getActiveAccount())
+                            std:: cout << "Destination and source cannot be the same account, please select a valid account"<< std:: endl;
+                    }
+                    while (dest - 1 == user ->getActiveAccount() );
 
+                    std:: cout << "Choose the amount you want to transfer, press (0) to cancel operation" << std:: endl;
+                    std:: string cause;
+                    do{
+                        while (!(getIntInput(input)));
+                        std:: cout << "Please insert a cause for your operation: "<< std:: endl;
+                        while (!getStringInput(cause));
+                        if (input == 0)
+                            break;
+                    }while (!(user->transfer(dest,input,cause)));
+                    if (input > 0)
+                        std:: cout << "You Successfully Transferred " << input << "$" << " to " << user-> getAccount().at(dest - 1)->getName() <<std:: endl;
+                }
+                else{
+                    std:: cout << "You only have 1 account, to transfer money create another account!" << std:: endl;
+                }
+            }
+            else {
+                std:: cout << "You can't transfer anything, your balance is 0!" << std:: endl;
+            }
+            break;
         }
         case 4:{    //user details
             user->printUserInfo();
@@ -85,7 +117,7 @@ bool Interface::startProgram() {
         case 6:{    //activate account
             user->printAccountInfo();
             std:: cout << "Select the number of the account you want to set active, press (0) to cancel operation " << std:: endl;
-            while (!(getIntInput(input,user->getAccount().size() )));
+            while (!(getIntInput(input,static_cast<int>(user->getAccount().size()) )));
             if (input != 0)
                 user ->switchAccount(input);
             break;
