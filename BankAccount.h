@@ -11,12 +11,6 @@
 #include "Transaction.h"
 
 class BankAccount {
-private:
-    std::string accountName;
-    int balance;
-    std::vector<std::unique_ptr<Transaction>> transactionHistoryWithdraw;
-    std::vector<std::unique_ptr<Transaction>> transactionHistoryDeposit;
-
 
 public:
     explicit BankAccount(std::string n,int b=0):balance(b),accountName(std::move(n)){};
@@ -48,6 +42,15 @@ public:
     size_t getSizeOfDeposit() const{
         return transactionHistoryDeposit.size();
     }
+
+private:
+    std::string accountName;
+    int balance;
+    std::vector<std::unique_ptr<Transaction>> transactionHistoryWithdraw;
+    std::vector<std::unique_ptr<Transaction>> transactionHistoryDeposit;
+
+
+
 };
 
 

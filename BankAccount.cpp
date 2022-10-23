@@ -18,6 +18,7 @@ Transaction BankAccount::removeTransaction(int index,int type) {
         tmp.swap(transactionHistoryDeposit.at(index-1));
         transactionHistoryDeposit.erase(transactionHistoryDeposit.begin()+index-1);
     }
+
     return *tmp;
 }
 

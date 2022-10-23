@@ -10,13 +10,7 @@
 #include "BankAccount.h"
 
 class User {
-private:
-    std::string name;
-    std::string surname;
-    tm * birthday;
-    std::string address;
-    std::vector<std::unique_ptr<BankAccount>> account;
-    int activeAccount;
+
 public:
     User(std::string n,std::string s,tm* b,std::string a):name(std::move(n)),surname(std::move(s)),address(std::move(a)),birthday(b){
         activeAccount=0;
@@ -55,6 +49,13 @@ public:
         return activeAccount;
     }
 
+private:
+    std::string name;
+    std::string surname;
+    tm * birthday;
+    std::string address;
+    std::vector<std::unique_ptr<BankAccount>> account;
+    int activeAccount;
 };
 
 

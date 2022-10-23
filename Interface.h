@@ -9,8 +9,7 @@
 
 
 class Interface {
-private:
-    std::unique_ptr<User> user;
+
 
 public:
 
@@ -29,6 +28,9 @@ public:
     static bool getIntInput (int &input, int maxVal = 100000000, int minVal = 0);
     static void clear ();
     static bool isValidDate (tm *toCheck);
+
+private:
+    std::unique_ptr<User> user;
 };
 
 

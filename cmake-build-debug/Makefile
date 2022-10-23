@@ -64,6 +64,39 @@ CMAKE_BINARY_DIR = C:\Users\arman\Documents\GitHub\ElaboratoLaboratorio\cmake-bu
 #=============================================================================
 # Targets provided globally by CMake.
 
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+.PHONY : list_install_components/fast
+
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	"C:\Program Files\JetBrains\CLion 2020.2.4\bin\cmake\win\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	"C:\Program Files\JetBrains\CLion 2020.2.4\bin\cmake\win\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local/fast
+
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	"C:\Program Files\JetBrains\CLion 2020.2.4\bin\cmake\win\bin\cmake.exe" -P cmake_install.cmake
+.PHONY : install
+
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	"C:\Program Files\JetBrains\CLion 2020.2.4\bin\cmake\win\bin\cmake.exe" -P cmake_install.cmake
+.PHONY : install/fast
+
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
@@ -83,6 +116,18 @@ rebuild_cache:
 # Special rule for the target rebuild_cache
 rebuild_cache/fast: rebuild_cache
 .PHONY : rebuild_cache/fast
+
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	"C:\Program Files\JetBrains\CLion 2020.2.4\bin\cmake\win\bin\cmake.exe" -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
+
+# Special rule for the target install/strip
+install/strip/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	"C:\Program Files\JetBrains\CLion 2020.2.4\bin\cmake\win\bin\cmake.exe" -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -127,6 +172,58 @@ ElaboratoLaboratorio: cmake_check_build_system
 ElaboratoLaboratorio/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ElaboratoLaboratorio.dir\build.make CMakeFiles/ElaboratoLaboratorio.dir/build
 .PHONY : ElaboratoLaboratorio/fast
+
+#=============================================================================
+# Target rules for targets named gmock_main
+
+# Build rule for target.
+gmock_main: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 gmock_main
+.PHONY : gmock_main
+
+# fast build rule for target.
+gmock_main/fast:
+	$(MAKE) $(MAKESILENT) -f lib\googletest-main\googlemock\CMakeFiles\gmock_main.dir\build.make lib/googletest-main/googlemock/CMakeFiles/gmock_main.dir/build
+.PHONY : gmock_main/fast
+
+#=============================================================================
+# Target rules for targets named gmock
+
+# Build rule for target.
+gmock: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 gmock
+.PHONY : gmock
+
+# fast build rule for target.
+gmock/fast:
+	$(MAKE) $(MAKESILENT) -f lib\googletest-main\googlemock\CMakeFiles\gmock.dir\build.make lib/googletest-main/googlemock/CMakeFiles/gmock.dir/build
+.PHONY : gmock/fast
+
+#=============================================================================
+# Target rules for targets named gtest
+
+# Build rule for target.
+gtest: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 gtest
+.PHONY : gtest
+
+# fast build rule for target.
+gtest/fast:
+	$(MAKE) $(MAKESILENT) -f lib\googletest-main\googletest\CMakeFiles\gtest.dir\build.make lib/googletest-main/googletest/CMakeFiles/gtest.dir/build
+.PHONY : gtest/fast
+
+#=============================================================================
+# Target rules for targets named gtest_main
+
+# Build rule for target.
+gtest_main: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 gtest_main
+.PHONY : gtest_main
+
+# fast build rule for target.
+gtest_main/fast:
+	$(MAKE) $(MAKESILENT) -f lib\googletest-main\googletest\CMakeFiles\gtest_main.dir\build.make lib/googletest-main/googletest/CMakeFiles/gtest_main.dir/build
+.PHONY : gtest_main/fast
 
 BankAccount.obj: BankAccount.cpp.obj
 .PHONY : BankAccount.obj
@@ -175,6 +272,78 @@ Interface.s: Interface.cpp.s
 Interface.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ElaboratoLaboratorio.dir\build.make CMakeFiles/ElaboratoLaboratorio.dir/Interface.cpp.s
 .PHONY : Interface.cpp.s
+
+Tests/testBankAccount.obj: Tests/testBankAccount.cpp.obj
+.PHONY : Tests/testBankAccount.obj
+
+# target to build an object file
+Tests/testBankAccount.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ElaboratoLaboratorio.dir\build.make CMakeFiles/ElaboratoLaboratorio.dir/Tests/testBankAccount.cpp.obj
+.PHONY : Tests/testBankAccount.cpp.obj
+
+Tests/testBankAccount.i: Tests/testBankAccount.cpp.i
+.PHONY : Tests/testBankAccount.i
+
+# target to preprocess a source file
+Tests/testBankAccount.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ElaboratoLaboratorio.dir\build.make CMakeFiles/ElaboratoLaboratorio.dir/Tests/testBankAccount.cpp.i
+.PHONY : Tests/testBankAccount.cpp.i
+
+Tests/testBankAccount.s: Tests/testBankAccount.cpp.s
+.PHONY : Tests/testBankAccount.s
+
+# target to generate assembly for a file
+Tests/testBankAccount.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ElaboratoLaboratorio.dir\build.make CMakeFiles/ElaboratoLaboratorio.dir/Tests/testBankAccount.cpp.s
+.PHONY : Tests/testBankAccount.cpp.s
+
+Tests/testTransaction.obj: Tests/testTransaction.cpp.obj
+.PHONY : Tests/testTransaction.obj
+
+# target to build an object file
+Tests/testTransaction.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ElaboratoLaboratorio.dir\build.make CMakeFiles/ElaboratoLaboratorio.dir/Tests/testTransaction.cpp.obj
+.PHONY : Tests/testTransaction.cpp.obj
+
+Tests/testTransaction.i: Tests/testTransaction.cpp.i
+.PHONY : Tests/testTransaction.i
+
+# target to preprocess a source file
+Tests/testTransaction.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ElaboratoLaboratorio.dir\build.make CMakeFiles/ElaboratoLaboratorio.dir/Tests/testTransaction.cpp.i
+.PHONY : Tests/testTransaction.cpp.i
+
+Tests/testTransaction.s: Tests/testTransaction.cpp.s
+.PHONY : Tests/testTransaction.s
+
+# target to generate assembly for a file
+Tests/testTransaction.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ElaboratoLaboratorio.dir\build.make CMakeFiles/ElaboratoLaboratorio.dir/Tests/testTransaction.cpp.s
+.PHONY : Tests/testTransaction.cpp.s
+
+Tests/testUser.obj: Tests/testUser.cpp.obj
+.PHONY : Tests/testUser.obj
+
+# target to build an object file
+Tests/testUser.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ElaboratoLaboratorio.dir\build.make CMakeFiles/ElaboratoLaboratorio.dir/Tests/testUser.cpp.obj
+.PHONY : Tests/testUser.cpp.obj
+
+Tests/testUser.i: Tests/testUser.cpp.i
+.PHONY : Tests/testUser.i
+
+# target to preprocess a source file
+Tests/testUser.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ElaboratoLaboratorio.dir\build.make CMakeFiles/ElaboratoLaboratorio.dir/Tests/testUser.cpp.i
+.PHONY : Tests/testUser.cpp.i
+
+Tests/testUser.s: Tests/testUser.cpp.s
+.PHONY : Tests/testUser.s
+
+# target to generate assembly for a file
+Tests/testUser.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ElaboratoLaboratorio.dir\build.make CMakeFiles/ElaboratoLaboratorio.dir/Tests/testUser.cpp.s
+.PHONY : Tests/testUser.cpp.s
 
 Transaction.obj: Transaction.cpp.obj
 .PHONY : Transaction.obj
@@ -255,14 +424,31 @@ help:
 	@echo ... clean
 	@echo ... depend
 	@echo ... edit_cache
+	@echo ... install
+	@echo ... install/local
+	@echo ... install/strip
+	@echo ... list_install_components
 	@echo ... rebuild_cache
 	@echo ... ElaboratoLaboratorio
+	@echo ... gmock
+	@echo ... gmock_main
+	@echo ... gtest
+	@echo ... gtest_main
 	@echo ... BankAccount.obj
 	@echo ... BankAccount.i
 	@echo ... BankAccount.s
 	@echo ... Interface.obj
 	@echo ... Interface.i
 	@echo ... Interface.s
+	@echo ... Tests/testBankAccount.obj
+	@echo ... Tests/testBankAccount.i
+	@echo ... Tests/testBankAccount.s
+	@echo ... Tests/testTransaction.obj
+	@echo ... Tests/testTransaction.i
+	@echo ... Tests/testTransaction.s
+	@echo ... Tests/testUser.obj
+	@echo ... Tests/testUser.i
+	@echo ... Tests/testUser.s
 	@echo ... Transaction.obj
 	@echo ... Transaction.i
 	@echo ... Transaction.s

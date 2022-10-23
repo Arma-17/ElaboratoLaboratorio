@@ -207,7 +207,6 @@ void Interface ::printOptions() {
 bool Interface ::getStringInput(std::string &input, int minLength, int maxLength) { //takes a string as input
     //performs various checks on that string, returns true if it passes, false otherwise
     try{
-        //std::getline(std::cin,input);
         std::cin>>input;
         if (input.length() > maxLength){
             throw std:: out_of_range("String is bigger than maximum required length (" + std::to_string(maxLength) + ") chars");

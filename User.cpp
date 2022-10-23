@@ -68,7 +68,7 @@ void User::printWithdrawHistory() const {
         }
     }
     else
-        std::cout<<" No withdrawal was made " << std::endl;
+        std::cout<<" No withdrawal has been made " << std::endl;
 }
 
 //add bank Account

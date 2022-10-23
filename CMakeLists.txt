@@ -3,5 +3,12 @@ project(ElaboratoLaboratorio)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(ElaboratoLaboratorio
-        main.cpp User.cpp  User.h Transaction.cpp Transaction.h Interface.cpp Interface.h BankAccount.cpp BankAccount.h)
+add_subdirectory(lib/googletest-main)
+
+
+include_directories(lib/googletest-main/googletest/include)
+include_directories(lib/googletest-main/googlemock/include)
+
+add_executable(ElaboratoLaboratorio main.cpp User.cpp  User.h Transaction.cpp Transaction.h Interface.cpp Interface.h BankAccount.cpp BankAccount.h Tests/testBankAccount.cpp Tests/testTransaction.cpp Tests/testUser.cpp)
+target_link_libraries(ElaboratoLaboratorio gtest gtest_main)
+
