@@ -49,3 +49,14 @@ void BankAccount::deposit(const std::string &profile, int value, const std::stri
     transactionHistoryDeposit.push_back(std::make_unique<Transaction>(value,DEPOSIT,cause,profile));
 }
 
+
+
+std::vector<Transaction> BankAccount::getWithdrawTransactions() const {
+    std::vector<Transaction> withdrawTransactions;
+
+    for (const auto& transaction : transactionHistoryWithdraw) {
+        withdrawTransactions.push_back(*transaction);
+    }
+
+    return withdrawTransactions;
+}

@@ -42,6 +42,8 @@ public:
     size_t getSizeOfDeposit() const{
         return transactionHistoryDeposit.size();
     }
+    std::vector<Transaction> getWithdrawTransactions() const;
+
 
 private:
     std::string accountName;

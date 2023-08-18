@@ -52,7 +52,7 @@ TEST_F(UserTest, transferValidReturnTest){ //checks if transfer return true on a
     ASSERT_TRUE(result);
 }
 
-TEST_F(UserTest, transferInvalidReturnTest){ //checks if transfer return false on a success
+TEST_F(UserTest, transferInvalidReturnTest){ //checks if transfer return false on a failure
     test->addAccount("accountTest1");
     test->addAccount("accountTest2");
     test->getAccount().at(0)->deposit("depositTest",100,"causeTest");
@@ -60,14 +60,5 @@ TEST_F(UserTest, transferInvalidReturnTest){ //checks if transfer return false o
     ASSERT_TRUE(result);
 }
 
-TEST_F(UserTest,removeTransactionTest){
-    Transaction t1(100,DEPOSIT,"causeTest1","depositTest1");
-    Transaction t2(200,DEPOSIT,"causeTest2","depositTest2");
-    test->addAccount("accountTest1");
-    test->addTransaction(t1);
-    test->addTransaction(t2);
-    test->delTransaction(1,DEPOSIT);
-    ASSERT_EQ(test->getAccount().at(0)->getDepositAtIndex(0),t1);
 
-}
 

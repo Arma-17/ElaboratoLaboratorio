@@ -24,6 +24,15 @@ public:
         dateAndTime=std::asctime(time);
     }
 
+    // Define the equality operator
+    bool operator==(const Transaction& other) const {
+        return amount == other.amount &&
+               type == other.type &&
+               cause == other.cause &&
+               sender == other.sender &&
+               dateAndTime == other.dateAndTime;
+    }
+
 
     //getters
      int getAmount() const{

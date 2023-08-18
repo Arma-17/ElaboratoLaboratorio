@@ -166,10 +166,10 @@ void Interface::createProfile() {
             std:: cout << "Invalid Date, please try again" << std:: endl;
         int day;
         std:: cout << "Please enter your day of birth (number)" << std:: endl;
-        while (!(getIntInput(day, 31)));
+        while (!(getIntInput(day, 31, 1)));
         int month;
         std:: cout << "Please enter your month of birth (number)" << std:: endl;
-        while (!(getIntInput(month, 12)));
+        while (!(getIntInput(month, 12, 1)));
         int year;
         std:: cout << "Please enter your year of birth (number)" << std:: endl;
         while (!(getIntInput(year)));
@@ -255,23 +255,23 @@ void Interface ::clear() { //clears input buffer, used in getIntInput
 
 
 bool Interface::isValidDate(tm *toCheck) { //checks if a date is valid
-    if(1900 <= toCheck->tm_year && toCheck -> tm_year <= 2100)
+    if(1900 <= toCheck->tm_year && toCheck -> tm_year <= 2024)
     {
         int thirtyOneDaysM[7] = {0,2,4,6,7,9,11}; //31 days months
         for (int i : thirtyOneDaysM){
-            if (toCheck->tm_mon == i){
+            if (toCheck->tm_mon-1 == i){
                 if (toCheck -> tm_mday > 0 && toCheck -> tm_mday <=31)
                     return true;
             }
         }
         int thirtyDaysM[4] = {3,5,8,10}; //thirty days months
         for (int i : thirtyDaysM){
-            if (toCheck->tm_mon == i){
+            if (toCheck->tm_mon-1 == i){
                 if (toCheck -> tm_mday > 0 && toCheck -> tm_mday <=30)
                     return true;
             }
         }
-        if(toCheck -> tm_mon ==1) //february
+        if(toCheck -> tm_mon-1 ==1) //february
         {
             if((toCheck-> tm_year%400==0 || (toCheck-> tm_year%100!=0 && toCheck-> tm_year%4==0)) && toCheck-> tm_mday>0 && toCheck-> tm_mday<=29)
                 return true;
