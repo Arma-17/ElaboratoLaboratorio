@@ -345,30 +345,6 @@ Tests/testUser.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ElaboratoLaboratorio.dir\build.make CMakeFiles/ElaboratoLaboratorio.dir/Tests/testUser.cpp.s
 .PHONY : Tests/testUser.cpp.s
 
-Transaction.obj: Transaction.cpp.obj
-.PHONY : Transaction.obj
-
-# target to build an object file
-Transaction.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ElaboratoLaboratorio.dir\build.make CMakeFiles/ElaboratoLaboratorio.dir/Transaction.cpp.obj
-.PHONY : Transaction.cpp.obj
-
-Transaction.i: Transaction.cpp.i
-.PHONY : Transaction.i
-
-# target to preprocess a source file
-Transaction.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ElaboratoLaboratorio.dir\build.make CMakeFiles/ElaboratoLaboratorio.dir/Transaction.cpp.i
-.PHONY : Transaction.cpp.i
-
-Transaction.s: Transaction.cpp.s
-.PHONY : Transaction.s
-
-# target to generate assembly for a file
-Transaction.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ElaboratoLaboratorio.dir\build.make CMakeFiles/ElaboratoLaboratorio.dir/Transaction.cpp.s
-.PHONY : Transaction.cpp.s
-
 User.obj: User.cpp.obj
 .PHONY : User.obj
 
@@ -449,9 +425,6 @@ help:
 	@echo ... Tests/testUser.obj
 	@echo ... Tests/testUser.i
 	@echo ... Tests/testUser.s
-	@echo ... Transaction.obj
-	@echo ... Transaction.i
-	@echo ... Transaction.s
 	@echo ... User.obj
 	@echo ... User.i
 	@echo ... User.s

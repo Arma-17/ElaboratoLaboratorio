@@ -70,16 +70,7 @@ TEST_F (BankAccountTest, withdrawTransactionHistoryTest){ //checks if withdraw t
     tested->withdraw("test", 100, "test cause");
     ASSERT_EQ(mustBeEqual , (tested->getWithdrawAtIndex(tested->getSizeOfDeposit()-1) ));
 }
-/*
-TEST_F (BankAccountTest, datedTransactionHistory){ //creates a date and checks if the getter works for the added transaction of that date
-    std:: unique_ptr <std:: tm> dateAndTime = createDate();
-    //creates a transaction that shall be equal to the one in the last slot of the vector
-    Transaction mustBeEqual (100,WITHDRAW, "test cause", "test",dateAndTime.get()); //creates a transaction with a set date
-    tested->addTransaction(mustBeEqual);
-    std:: vector <Transaction> ofDate = tested ->getOfDateTransactions(dateAndTime.get());
-    ASSERT_EQ(ofDate.at(ofDate.size()-1).getDateAndTime(),std:: asctime(dateAndTime.get()));
-}
- */
+
 TEST_F (BankAccountTest, addRemoveTransactionTest){ //checks if adding and removing transactions works
     std:: unique_ptr <std:: tm> dateAndTime = createDate();
     //creates a transaction that shall be equal to the one in the first slot of the vector

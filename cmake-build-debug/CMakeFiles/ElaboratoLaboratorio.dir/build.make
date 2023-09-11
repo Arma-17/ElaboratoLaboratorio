@@ -98,26 +98,11 @@ CMakeFiles/ElaboratoLaboratorio.dir/User.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ElaboratoLaboratorio.dir/User.cpp.s"
 	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\arman\Documents\GitHub\ElaboratoLaboratorio\User.cpp -o CMakeFiles\ElaboratoLaboratorio.dir\User.cpp.s
 
-CMakeFiles/ElaboratoLaboratorio.dir/Transaction.cpp.obj: CMakeFiles/ElaboratoLaboratorio.dir/flags.make
-CMakeFiles/ElaboratoLaboratorio.dir/Transaction.cpp.obj: CMakeFiles/ElaboratoLaboratorio.dir/includes_CXX.rsp
-CMakeFiles/ElaboratoLaboratorio.dir/Transaction.cpp.obj: C:/Users/arman/Documents/GitHub/ElaboratoLaboratorio/Transaction.cpp
-CMakeFiles/ElaboratoLaboratorio.dir/Transaction.cpp.obj: CMakeFiles/ElaboratoLaboratorio.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\arman\Documents\GitHub\ElaboratoLaboratorio\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/ElaboratoLaboratorio.dir/Transaction.cpp.obj"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ElaboratoLaboratorio.dir/Transaction.cpp.obj -MF CMakeFiles\ElaboratoLaboratorio.dir\Transaction.cpp.obj.d -o CMakeFiles\ElaboratoLaboratorio.dir\Transaction.cpp.obj -c C:\Users\arman\Documents\GitHub\ElaboratoLaboratorio\Transaction.cpp
-
-CMakeFiles/ElaboratoLaboratorio.dir/Transaction.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ElaboratoLaboratorio.dir/Transaction.cpp.i"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\arman\Documents\GitHub\ElaboratoLaboratorio\Transaction.cpp > CMakeFiles\ElaboratoLaboratorio.dir\Transaction.cpp.i
-
-CMakeFiles/ElaboratoLaboratorio.dir/Transaction.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ElaboratoLaboratorio.dir/Transaction.cpp.s"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\arman\Documents\GitHub\ElaboratoLaboratorio\Transaction.cpp -o CMakeFiles\ElaboratoLaboratorio.dir\Transaction.cpp.s
-
 CMakeFiles/ElaboratoLaboratorio.dir/Interface.cpp.obj: CMakeFiles/ElaboratoLaboratorio.dir/flags.make
 CMakeFiles/ElaboratoLaboratorio.dir/Interface.cpp.obj: CMakeFiles/ElaboratoLaboratorio.dir/includes_CXX.rsp
 CMakeFiles/ElaboratoLaboratorio.dir/Interface.cpp.obj: C:/Users/arman/Documents/GitHub/ElaboratoLaboratorio/Interface.cpp
 CMakeFiles/ElaboratoLaboratorio.dir/Interface.cpp.obj: CMakeFiles/ElaboratoLaboratorio.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\arman\Documents\GitHub\ElaboratoLaboratorio\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/ElaboratoLaboratorio.dir/Interface.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\arman\Documents\GitHub\ElaboratoLaboratorio\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/ElaboratoLaboratorio.dir/Interface.cpp.obj"
 	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ElaboratoLaboratorio.dir/Interface.cpp.obj -MF CMakeFiles\ElaboratoLaboratorio.dir\Interface.cpp.obj.d -o CMakeFiles\ElaboratoLaboratorio.dir\Interface.cpp.obj -c C:\Users\arman\Documents\GitHub\ElaboratoLaboratorio\Interface.cpp
 
 CMakeFiles/ElaboratoLaboratorio.dir/Interface.cpp.i: cmake_force
@@ -132,7 +117,7 @@ CMakeFiles/ElaboratoLaboratorio.dir/BankAccount.cpp.obj: CMakeFiles/ElaboratoLab
 CMakeFiles/ElaboratoLaboratorio.dir/BankAccount.cpp.obj: CMakeFiles/ElaboratoLaboratorio.dir/includes_CXX.rsp
 CMakeFiles/ElaboratoLaboratorio.dir/BankAccount.cpp.obj: C:/Users/arman/Documents/GitHub/ElaboratoLaboratorio/BankAccount.cpp
 CMakeFiles/ElaboratoLaboratorio.dir/BankAccount.cpp.obj: CMakeFiles/ElaboratoLaboratorio.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\arman\Documents\GitHub\ElaboratoLaboratorio\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/ElaboratoLaboratorio.dir/BankAccount.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\arman\Documents\GitHub\ElaboratoLaboratorio\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/ElaboratoLaboratorio.dir/BankAccount.cpp.obj"
 	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ElaboratoLaboratorio.dir/BankAccount.cpp.obj -MF CMakeFiles\ElaboratoLaboratorio.dir\BankAccount.cpp.obj.d -o CMakeFiles\ElaboratoLaboratorio.dir\BankAccount.cpp.obj -c C:\Users\arman\Documents\GitHub\ElaboratoLaboratorio\BankAccount.cpp
 
 CMakeFiles/ElaboratoLaboratorio.dir/BankAccount.cpp.i: cmake_force
@@ -147,7 +132,7 @@ CMakeFiles/ElaboratoLaboratorio.dir/Tests/testBankAccount.cpp.obj: CMakeFiles/El
 CMakeFiles/ElaboratoLaboratorio.dir/Tests/testBankAccount.cpp.obj: CMakeFiles/ElaboratoLaboratorio.dir/includes_CXX.rsp
 CMakeFiles/ElaboratoLaboratorio.dir/Tests/testBankAccount.cpp.obj: C:/Users/arman/Documents/GitHub/ElaboratoLaboratorio/Tests/testBankAccount.cpp
 CMakeFiles/ElaboratoLaboratorio.dir/Tests/testBankAccount.cpp.obj: CMakeFiles/ElaboratoLaboratorio.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\arman\Documents\GitHub\ElaboratoLaboratorio\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/ElaboratoLaboratorio.dir/Tests/testBankAccount.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\arman\Documents\GitHub\ElaboratoLaboratorio\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/ElaboratoLaboratorio.dir/Tests/testBankAccount.cpp.obj"
 	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ElaboratoLaboratorio.dir/Tests/testBankAccount.cpp.obj -MF CMakeFiles\ElaboratoLaboratorio.dir\Tests\testBankAccount.cpp.obj.d -o CMakeFiles\ElaboratoLaboratorio.dir\Tests\testBankAccount.cpp.obj -c C:\Users\arman\Documents\GitHub\ElaboratoLaboratorio\Tests\testBankAccount.cpp
 
 CMakeFiles/ElaboratoLaboratorio.dir/Tests/testBankAccount.cpp.i: cmake_force
@@ -162,7 +147,7 @@ CMakeFiles/ElaboratoLaboratorio.dir/Tests/testTransaction.cpp.obj: CMakeFiles/El
 CMakeFiles/ElaboratoLaboratorio.dir/Tests/testTransaction.cpp.obj: CMakeFiles/ElaboratoLaboratorio.dir/includes_CXX.rsp
 CMakeFiles/ElaboratoLaboratorio.dir/Tests/testTransaction.cpp.obj: C:/Users/arman/Documents/GitHub/ElaboratoLaboratorio/Tests/testTransaction.cpp
 CMakeFiles/ElaboratoLaboratorio.dir/Tests/testTransaction.cpp.obj: CMakeFiles/ElaboratoLaboratorio.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\arman\Documents\GitHub\ElaboratoLaboratorio\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/ElaboratoLaboratorio.dir/Tests/testTransaction.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\arman\Documents\GitHub\ElaboratoLaboratorio\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/ElaboratoLaboratorio.dir/Tests/testTransaction.cpp.obj"
 	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ElaboratoLaboratorio.dir/Tests/testTransaction.cpp.obj -MF CMakeFiles\ElaboratoLaboratorio.dir\Tests\testTransaction.cpp.obj.d -o CMakeFiles\ElaboratoLaboratorio.dir\Tests\testTransaction.cpp.obj -c C:\Users\arman\Documents\GitHub\ElaboratoLaboratorio\Tests\testTransaction.cpp
 
 CMakeFiles/ElaboratoLaboratorio.dir/Tests/testTransaction.cpp.i: cmake_force
@@ -177,7 +162,7 @@ CMakeFiles/ElaboratoLaboratorio.dir/Tests/testUser.cpp.obj: CMakeFiles/Elaborato
 CMakeFiles/ElaboratoLaboratorio.dir/Tests/testUser.cpp.obj: CMakeFiles/ElaboratoLaboratorio.dir/includes_CXX.rsp
 CMakeFiles/ElaboratoLaboratorio.dir/Tests/testUser.cpp.obj: C:/Users/arman/Documents/GitHub/ElaboratoLaboratorio/Tests/testUser.cpp
 CMakeFiles/ElaboratoLaboratorio.dir/Tests/testUser.cpp.obj: CMakeFiles/ElaboratoLaboratorio.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\arman\Documents\GitHub\ElaboratoLaboratorio\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/ElaboratoLaboratorio.dir/Tests/testUser.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\arman\Documents\GitHub\ElaboratoLaboratorio\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/ElaboratoLaboratorio.dir/Tests/testUser.cpp.obj"
 	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ElaboratoLaboratorio.dir/Tests/testUser.cpp.obj -MF CMakeFiles\ElaboratoLaboratorio.dir\Tests\testUser.cpp.obj.d -o CMakeFiles\ElaboratoLaboratorio.dir\Tests\testUser.cpp.obj -c C:\Users\arman\Documents\GitHub\ElaboratoLaboratorio\Tests\testUser.cpp
 
 CMakeFiles/ElaboratoLaboratorio.dir/Tests/testUser.cpp.i: cmake_force
@@ -192,7 +177,6 @@ CMakeFiles/ElaboratoLaboratorio.dir/Tests/testUser.cpp.s: cmake_force
 ElaboratoLaboratorio_OBJECTS = \
 "CMakeFiles/ElaboratoLaboratorio.dir/main.cpp.obj" \
 "CMakeFiles/ElaboratoLaboratorio.dir/User.cpp.obj" \
-"CMakeFiles/ElaboratoLaboratorio.dir/Transaction.cpp.obj" \
 "CMakeFiles/ElaboratoLaboratorio.dir/Interface.cpp.obj" \
 "CMakeFiles/ElaboratoLaboratorio.dir/BankAccount.cpp.obj" \
 "CMakeFiles/ElaboratoLaboratorio.dir/Tests/testBankAccount.cpp.obj" \
@@ -204,7 +188,6 @@ ElaboratoLaboratorio_EXTERNAL_OBJECTS =
 
 ElaboratoLaboratorio.exe: CMakeFiles/ElaboratoLaboratorio.dir/main.cpp.obj
 ElaboratoLaboratorio.exe: CMakeFiles/ElaboratoLaboratorio.dir/User.cpp.obj
-ElaboratoLaboratorio.exe: CMakeFiles/ElaboratoLaboratorio.dir/Transaction.cpp.obj
 ElaboratoLaboratorio.exe: CMakeFiles/ElaboratoLaboratorio.dir/Interface.cpp.obj
 ElaboratoLaboratorio.exe: CMakeFiles/ElaboratoLaboratorio.dir/BankAccount.cpp.obj
 ElaboratoLaboratorio.exe: CMakeFiles/ElaboratoLaboratorio.dir/Tests/testBankAccount.cpp.obj
@@ -217,7 +200,7 @@ ElaboratoLaboratorio.exe: lib/libgtest.a
 ElaboratoLaboratorio.exe: CMakeFiles/ElaboratoLaboratorio.dir/linklibs.rsp
 ElaboratoLaboratorio.exe: CMakeFiles/ElaboratoLaboratorio.dir/objects1.rsp
 ElaboratoLaboratorio.exe: CMakeFiles/ElaboratoLaboratorio.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\arman\Documents\GitHub\ElaboratoLaboratorio\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable ElaboratoLaboratorio.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\arman\Documents\GitHub\ElaboratoLaboratorio\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable ElaboratoLaboratorio.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\ElaboratoLaboratorio.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

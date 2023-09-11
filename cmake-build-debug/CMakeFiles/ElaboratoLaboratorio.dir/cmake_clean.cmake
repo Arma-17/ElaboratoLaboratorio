@@ -9,8 +9,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/ElaboratoLaboratorio.dir/Tests/testTransaction.cpp.obj.d"
   "CMakeFiles/ElaboratoLaboratorio.dir/Tests/testUser.cpp.obj"
   "CMakeFiles/ElaboratoLaboratorio.dir/Tests/testUser.cpp.obj.d"
-  "CMakeFiles/ElaboratoLaboratorio.dir/Transaction.cpp.obj"
-  "CMakeFiles/ElaboratoLaboratorio.dir/Transaction.cpp.obj.d"
   "CMakeFiles/ElaboratoLaboratorio.dir/User.cpp.obj"
   "CMakeFiles/ElaboratoLaboratorio.dir/User.cpp.obj.d"
   "CMakeFiles/ElaboratoLaboratorio.dir/main.cpp.obj"

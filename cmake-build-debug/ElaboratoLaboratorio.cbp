@@ -349,9 +349,6 @@
 		<Unit filename="C:/Users/arman/Documents/GitHub/ElaboratoLaboratorio/Tests/testUser.cpp">
 			<Option target="ElaboratoLaboratorio"/>
 		</Unit>
-		<Unit filename="C:/Users/arman/Documents/GitHub/ElaboratoLaboratorio/Transaction.cpp">
-			<Option target="ElaboratoLaboratorio"/>
-		</Unit>
 		<Unit filename="C:/Users/arman/Documents/GitHub/ElaboratoLaboratorio/Transaction.h">
 			<Option target="ElaboratoLaboratorio"/>
 		</Unit>

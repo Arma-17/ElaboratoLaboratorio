@@ -583,12 +583,17 @@ CMAKE_STATIC_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 CMAKE_STRIP-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_VERBOSE_MAKEFILE
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
+//Details about finding Python
+FIND_PACKAGE_MESSAGE_DETAILS_Python:INTERNAL=[C:/Users/arman/anaconda3/python.exe][cfound components: Interpreter ][v3.9.13()]
 //linker supports push/pop state
 _CMAKE_LINKER_PUSHPOP_STATE_SUPPORTED:INTERNAL=TRUE
 //CMAKE_INSTALL_PREFIX during last run
 _GNUInstallDirs_LAST_CMAKE_INSTALL_PREFIX:INTERNAL=C:/Program Files (x86)/ElaboratoLaboratorio
 //Path to a program.
-_Python_EXECUTABLE:INTERNAL=_Python_EXECUTABLE-NOTFOUND
+_Python_EXECUTABLE:INTERNAL=C:/Users/arman/anaconda3/python.exe
+//Python Properties
+_Python_INTERPRETER_PROPERTIES:INTERNAL=Python;3;9;13;64;;cp39-win_amd64;C:\Users\arman\anaconda3\Lib;C:\Users\arman\anaconda3\Lib;C:\Users\arman\anaconda3\Lib\site-packages;C:\Users\arman\anaconda3\Lib\site-packages
+_Python_INTERPRETER_SIGNATURE:INTERNAL=cc5834c0888d3bd9deea403b383f3cdc
 cmake_package_name:INTERNAL=GTest
 generated_dir:INTERNAL=C:/Users/arman/Documents/GitHub/ElaboratoLaboratorio/cmake-build-debug/lib/googletest-main/googletest/generated
 //ADVANCED property for variable: gmock_build_tests

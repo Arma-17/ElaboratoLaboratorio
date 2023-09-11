@@ -13,7 +13,6 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "C:/Users/arman/Documents/GitHub/ElaboratoLaboratorio/Tests/testBankAccount.cpp" "CMakeFiles/ElaboratoLaboratorio.dir/Tests/testBankAccount.cpp.obj" "gcc" "CMakeFiles/ElaboratoLaboratorio.dir/Tests/testBankAccount.cpp.obj.d"
   "C:/Users/arman/Documents/GitHub/ElaboratoLaboratorio/Tests/testTransaction.cpp" "CMakeFiles/ElaboratoLaboratorio.dir/Tests/testTransaction.cpp.obj" "gcc" "CMakeFiles/ElaboratoLaboratorio.dir/Tests/testTransaction.cpp.obj.d"
   "C:/Users/arman/Documents/GitHub/ElaboratoLaboratorio/Tests/testUser.cpp" "CMakeFiles/ElaboratoLaboratorio.dir/Tests/testUser.cpp.obj" "gcc" "CMakeFiles/ElaboratoLaboratorio.dir/Tests/testUser.cpp.obj.d"
-  "C:/Users/arman/Documents/GitHub/ElaboratoLaboratorio/Transaction.cpp" "CMakeFiles/ElaboratoLaboratorio.dir/Transaction.cpp.obj" "gcc" "CMakeFiles/ElaboratoLaboratorio.dir/Transaction.cpp.obj.d"
   "C:/Users/arman/Documents/GitHub/ElaboratoLaboratorio/User.cpp" "CMakeFiles/ElaboratoLaboratorio.dir/User.cpp.obj" "gcc" "CMakeFiles/ElaboratoLaboratorio.dir/User.cpp.obj.d"
   "C:/Users/arman/Documents/GitHub/ElaboratoLaboratorio/main.cpp" "CMakeFiles/ElaboratoLaboratorio.dir/main.cpp.obj" "gcc" "CMakeFiles/ElaboratoLaboratorio.dir/main.cpp.obj.d"
   )
