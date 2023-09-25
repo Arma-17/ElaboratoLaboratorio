@@ -71,5 +71,31 @@ TEST_F(UserTest, transferInvalidReturnTest){ //checks if transfer return false o
     ASSERT_FALSE(result);
 }
 
+TEST_F(UserTest, loadDataAndVerify) {
+    test->addAccount("accountTest1");
+    test->addAccount("accountTest2");
+
+    test->getAccount()[0]->deposit("depositTest1", 100, "causeTest1");
+    test->getAccount()[1]->deposit("depositTest2", 200, "causeTest2");
+
+    Transaction transaction1(50, WITHDRAW, "Withdraw1", "Sender1");
+    Transaction transaction2(75, WITHDRAW, "Withdraw2", "Sender2");
+
+    test->getAccount()[0]->addTransaction(transaction1);
+    test->getAccount()[1]->addTransaction(transaction2);
+
+    test->saveInFile();
+
+    ASSERT_EQ(2, test->getAccount().size());
+
+    // Verifica il saldo degli account
+    ASSERT_EQ(100, test->getAccount()[0]->getBalance());
+    ASSERT_EQ(200, test->getAccount()[1]->getBalance());
+
+    // Verifica il numero di transazioni
+    ASSERT_EQ(1, test->getAccount()[0]->getSizeOfWithdraw());
+    ASSERT_EQ(1, test->getAccount()[1]->getSizeOfWithdraw());
+}
+
 
 

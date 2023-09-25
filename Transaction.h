@@ -13,14 +13,22 @@ const int WITHDRAW=2;
 
 class Transaction {
 public:
-    Transaction(int a,int ty,std::string c,std::string s ):amount(a),type(ty),cause(std::move(c)),
+    Transaction(int a,int ty,std::string c,std::string s ):type(ty),cause(std::move(c)),
     sender(std::move(s)){
+        if (a < 0) {
+            throw std::invalid_argument("Amount cannot be negative");
+        }
+        amount = a;
         std::time_t t=std::time(nullptr);
         dateAndTime= ctime(&t);                     //assign the current time when used
     }
 
     //overloaded constructor to use a date as input
-    Transaction(int a,int ty,std::string c,std::string s,std::tm *time):amount(a),type(ty),cause(std::move(c)),sender(std::move(s)){
+    Transaction(int a,int ty,std::string c,std::string s,std::tm *time):type(ty),cause(std::move(c)),sender(std::move(s)){
+        if (a < 0) {
+            throw std::invalid_argument("Amount cannot be negative");
+        }
+        amount = a;
         dateAndTime=std::asctime(time);
     }
 

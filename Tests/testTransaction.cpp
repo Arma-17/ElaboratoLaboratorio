@@ -26,3 +26,31 @@ TEST_F(TransactionTest,TransactionTimeSetTest){
     std::unique_ptr<Transaction> transactionTest=std::make_unique<Transaction>(0,DEPOSIT,"testUser","testCause",date.get());
     ASSERT_EQ(std::asctime(date.get()),transactionTest->getDateAndTime());
 }
+
+TEST_F(TransactionTest, NegativeAmountExceptionTest) {
+    std::unique_ptr<std::tm> date = createDate();
+
+    ASSERT_THROW(
+            {
+                try {
+                    std::unique_ptr<Transaction> transactionTest = std::make_unique<Transaction>(-10, DEPOSIT, "testUser", "testCause", date.get());
+                } catch (const std::invalid_argument& e) {
+                    EXPECT_STREQ("Amount cannot be negative", e.what());
+                    throw;  //throw again the exception for the ASSERT_THROW block
+                }
+            },std::invalid_argument);
+}
+
+TEST_F(TransactionTest, NegativeWithdrawAmountExceptionTest) {
+    std::unique_ptr<std::tm> date = createDate();
+
+    ASSERT_THROW(
+            {
+                try {
+                    std::unique_ptr<Transaction> transactionTest = std::make_unique<Transaction>(-10, WITHDRAW, "testUser", "testCause", date.get());
+                } catch (const std::invalid_argument& e) {
+                    EXPECT_STREQ("Amount cannot be negative", e.what());
+                    throw;
+                }
+            },std::invalid_argument);
+}

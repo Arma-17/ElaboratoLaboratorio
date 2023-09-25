@@ -60,3 +60,55 @@ std::vector<Transaction> BankAccount::getWithdrawTransactions() const {
 
     return withdrawTransactions;
 }
+
+//transaction search operations
+std::vector<Transaction> BankAccount::searchTransactionsByCause(const std::string& cause) const {
+    std::vector<Transaction> matchingTransactions;
+
+    for (const auto& deposit : transactionHistoryDeposit) {
+        if (deposit->getCause().find(cause) != std::string::npos) {
+            matchingTransactions.push_back(*deposit);
+        }
+    }
+    for (const auto& withdraw : transactionHistoryWithdraw) {
+        if (withdraw->getCause().find(cause) != std::string::npos) {
+            matchingTransactions.push_back(*withdraw);
+        }
+    }
+
+    return matchingTransactions;
+}
+
+std::vector<Transaction> BankAccount::searchTransactionsBySender(const std::string& sender) const {
+    std::vector<Transaction> matchingTransactions;
+
+    for (const auto& deposit : transactionHistoryDeposit) {
+        if (deposit->getSender().find(sender) != std::string::npos) {
+            matchingTransactions.push_back(*deposit);
+        }
+    }
+    for (const auto& withdraw : transactionHistoryWithdraw) {
+        if (withdraw->getSender().find(sender) != std::string::npos) {
+            matchingTransactions.push_back(*withdraw);
+        }
+    }
+
+    return matchingTransactions;
+}
+
+std::vector<Transaction> BankAccount::searchTransactionsByDate(const std::string& date) const {
+    std::vector<Transaction> matchingTransactions;
+
+    for (const auto& deposit : transactionHistoryDeposit) {
+        if (deposit->getDateAndTime().find(date) != std::string::npos) {
+            matchingTransactions.push_back(*deposit);
+        }
+    }
+    for (const auto& withdraw : transactionHistoryWithdraw) {
+        if (withdraw->getDateAndTime().find(date) != std::string::npos) {
+            matchingTransactions.push_back(*withdraw);
+        }
+    }
+
+    return matchingTransactions;
+}

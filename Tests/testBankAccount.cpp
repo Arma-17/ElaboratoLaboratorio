@@ -86,3 +86,56 @@ TEST_F (BankAccountTest, addRemoveTransactionTest){ //checks if adding and remov
 }
 
 
+// Test for searching transactions by cause
+TEST_F(BankAccountTest, searchTransactionsByCauseTest) {
+    tested->deposit("test1", 100, "test cause 1");
+    tested->deposit("test2", 200, "test cause 2");
+    tested->deposit("test3", 150, "test cause 3");
+    tested->withdraw("test4", 50, "test cause 4");
+
+    std::vector<Transaction> result = tested->searchTransactionsByCause("cause 2");
+
+    // Ensure that only transactions with "cause 2" are included in the result
+    for (const auto& transaction : result) {
+        ASSERT_EQ("test cause 2", transaction.getCause());
+    }
+
+    ASSERT_EQ(1, result.size());
+}
+
+// Test for searching transactions by sender
+TEST_F(BankAccountTest, searchTransactionsBySenderTest) {
+    tested->deposit("sender1", 100, "test cause 1");
+    tested->deposit("sender2", 200, "test cause 2");
+    tested->withdraw("sender3", 150, "test cause 3");
+    tested->withdraw("sender4", 50, "test cause 4");
+
+    std::vector<Transaction> result = tested->searchTransactionsBySender("sender2");
+
+    for (const auto& transaction : result) {
+        ASSERT_EQ("sender2", transaction.getSender());
+    }
+
+    ASSERT_EQ(1, result.size());
+}
+
+// Test for searching transactions by date
+TEST_F(BankAccountTest, searchTransactionsByDateTest) {
+    tested->deposit("test1", 100, "test cause 1");
+    tested->deposit("test2", 200, "test cause 2");
+    tested->deposit("test3", 150, "test cause 3");
+    tested->withdraw("test4", 50, "test cause 4");
+
+    // Use the current date as a search criterion
+    std::time_t t = std::time(nullptr);
+    std::string currentDate = ctime(&t);
+
+    std::vector<Transaction> result = tested->searchTransactionsByDate(currentDate);
+
+    for (const auto& transaction : result) {
+        ASSERT_EQ(currentDate, transaction.getDateAndTime());
+    }
+
+    ASSERT_EQ(4, result.size());
+}
+

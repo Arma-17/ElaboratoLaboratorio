@@ -42,16 +42,20 @@ public:
     size_t getSizeOfDeposit() const{
         return transactionHistoryDeposit.size();
     }
+
+    //test
     std::vector<Transaction> getWithdrawTransactions() const;
 
+    //transaction Search
+    std::vector<Transaction> searchTransactionsByCause(const std::string &cause) const;
+    std::vector<Transaction> searchTransactionsByDate(const std::string &date) const;
+    std::vector<Transaction> searchTransactionsBySender(const std::string &Sender) const;
 
 private:
     std::string accountName;
     int balance;
     std::vector<std::unique_ptr<Transaction>> transactionHistoryWithdraw;
     std::vector<std::unique_ptr<Transaction>> transactionHistoryDeposit;
-
-
 
 };
 
