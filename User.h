@@ -17,6 +17,7 @@ public:
     }
     ~User();
 
+
     //basic operation
     bool withdraw(int value,const std::string & cause);
     void deposit(int value,const std::string & cause);
