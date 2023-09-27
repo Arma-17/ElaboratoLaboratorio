@@ -8,19 +8,28 @@
 
 
 //basic account operation
-Transaction BankAccount::removeTransaction(int index,int type) {
+Transaction BankAccount::removeTransaction(int index, int type) {
     std::unique_ptr<Transaction> tmp;
-    if (type==WITHDRAW){
-        tmp.swap(transactionHistoryWithdraw.at(index-1));
-        transactionHistoryWithdraw.erase(transactionHistoryWithdraw.begin()+index-1);
-    }
-    else if(type==DEPOSIT){
-        tmp.swap(transactionHistoryDeposit.at(index-1));
-        transactionHistoryDeposit.erase(transactionHistoryDeposit.begin()+index-1);
+
+    if (type == WITHDRAW) {
+        if (index >= 1 && index <= transactionHistoryWithdraw.size()) {
+            tmp.swap(transactionHistoryWithdraw.at(index - 1));
+            transactionHistoryWithdraw.erase(transactionHistoryWithdraw.begin() + index - 1);
+        } else {
+            throw std::runtime_error("Error: Withdraw transaction index out of bounds or transaction doesn't exist.");
+        }
+    } else if (type == DEPOSIT) {
+        if (index >= 1 && index <= transactionHistoryDeposit.size()) {
+            tmp.swap(transactionHistoryDeposit.at(index - 1));
+            transactionHistoryDeposit.erase(transactionHistoryDeposit.begin() + index - 1);
+        }  else {
+            throw std::runtime_error("Error: Deposit transaction index out of bounds or transaction doesn't exist.");
+        }
     }
 
     return *tmp;
 }
+
 
 void BankAccount::addTransaction(const Transaction &add) {
     if(add.getType()==WITHDRAW){

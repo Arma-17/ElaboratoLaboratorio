@@ -204,7 +204,7 @@ void Interface ::printOptions() {
 
 //FUNCTIONS TO GET INPUT
 
-bool Interface ::getStringInput(std::string &input, int minLength, int maxLength) { //takes a string as input
+bool Interface ::getStringInput( std::string &input, int minLength, int maxLength) const { //takes a string as input
     //performs various checks on that string, returns true if it passes, false otherwise
     try{
         std::cin>>input;
@@ -222,7 +222,7 @@ bool Interface ::getStringInput(std::string &input, int minLength, int maxLength
     return true;
 }
 
-bool Interface ::getIntInput(int &input, int maxVal, int minVal) {//takes an int as input
+bool Interface ::getIntInput( int &input, int maxVal, int minVal) const {//takes an int as input
     //performs various checks on the int, returns true if it passes, false otherwise
     try {
         std:: cin >> input;
@@ -254,7 +254,7 @@ void Interface ::clear() { //clears input buffer, used in getIntInput
 }
 
 
-bool Interface::isValidDate(tm *toCheck) { //checks if a date is valid
+bool Interface::isValidDate(const tm *toCheck) const{ //checks if a date is valid
     if(1900 <= toCheck->tm_year && toCheck -> tm_year <= 2024)
     {
         int thirtyOneDaysM[7] = {0,2,4,6,7,9,11}; //31 days months

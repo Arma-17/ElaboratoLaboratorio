@@ -24,10 +24,10 @@ public:
     void printOptions();
 
     //input checks
-    static bool getStringInput (std:: string & input, int minLength = 0, int maxLength = 100);
-    static bool getIntInput (int &input, int maxVal = 100000000, int minVal = 0);
+     bool getStringInput ( std:: string & input, int minLength = 0, int maxLength = 100) const  ;
+     bool getIntInput ( int &input, int maxVal = 100000000, int minVal = 0) const ;
     static void clear ();
-    static bool isValidDate (tm *toCheck);
+    bool isValidDate (const tm *toCheck) const;
 
 private:
     std::unique_ptr<User> user;
