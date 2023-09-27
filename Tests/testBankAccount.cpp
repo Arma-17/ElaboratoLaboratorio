@@ -154,6 +154,7 @@ TEST_F(BankAccountTest, removeNonExistentTransactionTest) {
         FAIL() << "Expected an exception for removing a non-existent transaction.";
     } catch (const std::runtime_error& e) {
         SUCCEED();
+
     }
     // final check on the parameters
     ASSERT_EQ(initialBalance, tested->getBalance());
