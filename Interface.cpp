@@ -204,6 +204,7 @@ void Interface ::printOptions() {
 
 //FUNCTIONS TO GET INPUT
 
+
 bool Interface ::getStringInput( std::string &input, int minLength, int maxLength) const { //takes a string as input
     //performs various checks on that string, returns true if it passes, false otherwise
     try{
@@ -221,6 +222,7 @@ bool Interface ::getStringInput( std::string &input, int minLength, int maxLengt
     }
     return true;
 }
+
 
 bool Interface ::getIntInput( int &input, int maxVal, int minVal) const {//takes an int as input
     //performs various checks on the int, returns true if it passes, false otherwise
@@ -252,6 +254,7 @@ void Interface ::clear() { //clears input buffer, used in getIntInput
     std:: cin.clear();
     std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 }
+
 
 
 bool Interface::isValidDate(const tm *toCheck) const{ //checks if a date is valid

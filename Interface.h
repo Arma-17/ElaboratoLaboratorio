@@ -29,6 +29,7 @@ public:
     static void clear ();
     bool isValidDate (const tm *toCheck) const;
 
+
 private:
     std::unique_ptr<User> user;
 };

@@ -9,6 +9,7 @@
 
 //basic account operation
 Transaction BankAccount::removeTransaction(int index, int type) {
+
     std::unique_ptr<Transaction> tmp;
 
     if (type == WITHDRAW) {

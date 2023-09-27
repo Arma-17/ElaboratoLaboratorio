@@ -139,6 +139,7 @@ TEST_F(BankAccountTest, searchTransactionsByDateTest) {
     ASSERT_EQ(4, result.size());
 }
 
+
 TEST_F(BankAccountTest, removeNonExistentTransactionTest) {
     tested->deposit("test1", 100, "test cause 1");
     tested->deposit("test2", 200, "test cause 2");
@@ -154,7 +155,6 @@ TEST_F(BankAccountTest, removeNonExistentTransactionTest) {
         FAIL() << "Expected an exception for removing a non-existent transaction.";
     } catch (const std::runtime_error& e) {
         SUCCEED();
-
     }
     // final check on the parameters
     ASSERT_EQ(initialBalance, tested->getBalance());
